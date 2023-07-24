@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * output_hexadec - outputs hexadecimal
+ * output_hexadec - Outputs hexadecimal
  * @args: string
- * @bffr: buffer pointer
- * @elem_bffr: index pointer
- * Return: number of chars printed
+ * @bffr: the buffer pointer
+ * @elem_bffr: the index pointer
+ * Return: number of chars to be printed
  */
 int output_hexadec(va_list args, char *bffr, unsigned int elem_bffr)
 {

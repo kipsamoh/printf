@@ -1,10 +1,11 @@
 #include "main.h"
+
 /**
- * output_octal - prints decimal number in octal
- * @args: input num
- * @bffr: buffer pointer
- * @elem_bffr: index pointer
- * Return: chars output
+ * output_octal - prints decimal number in octal.
+ * @args: input num.
+ * @bffr: buffer pointer.
+ * @elem_bffr: index pointer.
+ * Return: chars output.
  */
 int output_octal(va_list args, char *bffr, unsigned int elem_bffr)
 {

@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * output_binry - outputs decimal in binary
- * @args: string
- * @bffr: buffer pointer
- * @elem_bffr: index pointer
+ * output_binry - Outputs decimal in binary.
+ * @args: the string.
+ * @bffr: the buffer pointer.
+ * @elem_bffr: index pointer.
  * Return: chars output.
  */
 int output_binry(va_list args, char *bffr, unsigned int elem_bffr)

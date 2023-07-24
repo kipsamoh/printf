@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * bffr_handle - buffer char concat.
+ * bffr_handle - buffer char concatenation.
  * @bffr: pointer to buffer
- * @z: char to concatenate
+ * @z: char to be concatenated
  * @elem_bffr: elements of buffer pointer
  * Return: elements pointers.
  */

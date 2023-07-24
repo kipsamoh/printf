@@ -1,10 +1,11 @@
 #include "main.h"
+
 /**
- * output_sdhexadec - prints a decimal in hexadecimal
- * @args: The character to print
- * @bffr: buffer pointer
- * @elem_bffr: index for buffer pointer
- * Return: number of chars printed
+ * output_sdhexadec - prints a decimal in hexadecimal.
+ * @args: The character to print.
+ * @bffr: buffer pointer.
+ * @elem_bffr: index for buffer pointer.
+ * Return: number of chars printed.
  */
 int output_sdhexadec(va_list args, char *bffr, unsigned int elem_bffr)
 {

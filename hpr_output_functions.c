@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
- * hpr_output_functions - returns number of specifiers.
- * @ch: argument specifier
+ * hpr_output_functions - returns the  number of specifiers.
+ * @ch: the argument specifier
  * @element: position of args specifier.
  * Return: number of specifiers.
  */
