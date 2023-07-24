@@ -21,7 +21,7 @@ typedef struct output
 int _printf(const char *format, ...);
 int output_chout(va_list __attribute__((unused)), char *, unsigned int);
 int output_chr(va_list args, char *bffr, unsigned int elem_bffr);
-int ouput_string(va_list args, char *bffr, unsigned int elem_bffr);
+int output_string(va_list args, char *bffr, unsigned int elem_bffr);
 int output_int(va_list args, char *bffr, unsigned int elem_bffr);
 int output_binry(va_list args, char *bffr, unsigned int elem_bffr);
 int output_unt(va_list args, char *bffr, unsigned int elem_bffr);
