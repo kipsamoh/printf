@@ -15,7 +15,7 @@
 typedef struct output
 {
 	int (*pntr)(va_list, char *, unsigned int);
-	char *format;
+	char *frmt_type;
 } output_t;
 
 int _printf(const char *format, ...);
