@@ -9,11 +9,11 @@
 int _printf(const char *format, ...)
 {
 	unsigned int x = 0, length = 0, elem_bffr = 0;
-	va_list arguments;
+	va_list args;
 	int (*func)(va_list, char *, unsigned int);
 	char *place_holder;
 
-	va_start(arguments, format), place_holder = malloc(sizeof(char) * 1024);
+	va_start(args, format), place_holder = malloc(sizeof(char) * 1024);
 	if (!format || !place_holder || (format[x] == '%' && !format[x + 1]))
 		return (-1);
 	if (!format[x])
@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		if (format[x] == '%')
 		{
 			if (format[x + 1] == '\0')
-			{	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(arguments);
+			{	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(args);
 				return (-1);
 			}
 			else
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					length += func(arguments, place_holder, elem_bffr);
+					length += func(args, place_holder, elem_bffr);
 					x += hpr_output_functions(format, x + 1);
 				}
 			} x++;
@@ -46,6 +46,6 @@ int _printf(const char *format, ...)
 		for (elem_bffr = length; elem_bffr > 1024; elem_bffr -= 1024)
 			;
 	}
-	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(arguments);
+	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(args);
 	return (length);
 }
