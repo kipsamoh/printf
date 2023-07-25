@@ -9,14 +9,14 @@
  **/
 int handler(const char *str, va_list list)
 {
-	int size, i, aux;
+	int size, x, aux;
 
 	size = 0;
-	for (i = 0; str[i] != 0; i++)
+	for (x = 0; str[x] != 0; x++)
 	{
-		if (str[i] == '%')
+		if (str[x] == '%')
 		{
-			aux = percent_handler(str, list, &i);
+			aux = percent_handler(str, list, &x);
 			if (aux == -1)
 				return (-1);
 
@@ -24,7 +24,7 @@ int handler(const char *str, va_list list)
 			continue;
 		}
 
-		_putchar(str[i]);
+		_putchar(str[x]);
 		size = size + 1;
 	}
 
@@ -40,7 +40,7 @@ int handler(const char *str, va_list list)
  *
  * Return: Size of the numbers of elements printed
  **/
-int percent_handler(const char *str, va_list list, int *i)
+int percent_handler(const char *str, va_list list, int *x)
 {
 	int size, j, number_formats;
 	format formats[] = {
@@ -52,12 +52,12 @@ int percent_handler(const char *str, va_list list, int *i)
 		{'r', print_rev_string}, {'R', print_rot}
 	};
 
-	*i = *i + 1;
+	*x = *x + 1;
 
-	if (str[*i] == '\0')
+	if (str[*x] == '\0')
 		return (-1);
 
-	if (str[*i] == '%')
+	if (str[*x] == '%')
 	{
 		_putchar('%');
 		return (1);
@@ -66,7 +66,7 @@ int percent_handler(const char *str, va_list list, int *i)
 	number_formats = sizeof(formats) / sizeof(formats[0]);
 	for (size = j = 0; j < number_formats; j++)
 	{
-		if (str[*i] == formats[j].type)
+		if (str[*x] == formats[j].type)
 		{
 			size = formats[j].f(list);
 			return (size);
@@ -74,7 +74,7 @@ int percent_handler(const char *str, va_list list, int *i)
 
 	}
 
-	_putchar('%'), _putchar(str[*i]);
+	_putchar('%'), _putchar(str[*x]);
 
 	return (2);
 }
