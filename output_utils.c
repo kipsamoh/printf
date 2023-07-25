@@ -2,10 +2,10 @@
 
 
 /**
- * _strlen - Calculate the length of a string
- * @str: String
+ * _strlen - checks for string size
+ * @str: input string
  *
- * Return: Length
+ * Return: size
  **/
 int _strlen(const char *str)
 {
