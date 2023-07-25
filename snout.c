@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * itoa - integer to ascii
- * @num: num
- * @base: base
+ * itoa - changes nums to its ascii values
+ * @num: integer
+ * @base: desired base
  *
- * Return: char
+ * Return: character
  **/
 char *itoa(long int num, int base)
 {
