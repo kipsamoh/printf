@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * rot13 - Encodes a string using rot13.
- * @s: String to enconde
- * Return: String encode
+ * rot13 - manipulates string to rot13 code.
+ * @s: input string
+ * Return: encoded string
  */
 int rot13(char *s)
 {
