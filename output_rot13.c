@@ -7,16 +7,16 @@
  */
 int rot13(char *s)
 {
-	int i, j;
+	int x, j;
 	char *normal, *rot13;
 
 	normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	for (i = 0; s[i] != '\0'; i++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
 		for (j = 0; normal[j] != '\0'; j++)
 		{
-			if (s[i] == normal[j])
+			if (s[x] == normal[j])
 			{
 				_putchar(rot13[j]);
 				break;
@@ -24,9 +24,9 @@ int rot13(char *s)
 		}
 
 		if (!normal[j])
-			_putchar(s[i]);
+			_putchar(s[x]);
 	}
-	return (i);
+	return (x);
 }
 
 /**
