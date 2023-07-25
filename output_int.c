@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_integer - Print a number in base 10
- * @list: Number to print in base 10
+ * print_integer - outputs num in decimal
+ * @list: Num input
  *
- * Return: Length of th numbers in decimal
+ * Return: size of the num
  **/
 int print_integer(va_list list)
 {
