@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_binary - Print a number in base 2
- * @list: Number to print in base 2
+ * print_binary - outputs numbers in 0s and 1s
+ * @list: Num to output
  *
- * Return: Length of the numbers in binary
+ * Return: size of the num in bytes
  **/
 int print_binary(va_list list)
 {
