@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * handler - Format controller
- * @str: String format
- * @list: List of arguments
+ * handler - format specifier
+ * @str: String 
+ * @list: arguments
  *
- * Return: Total size of arguments with the total size of the base string
+ * Return: arguments with pointer to string
  **/
 int handler(const char *str, va_list list)
 {
