@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_rev_string - Print a string in reverse
- * @list: List of arguments
+ * print_rev_string - outputs chars in reverse
+ * @list: arguments
  *
- * Return: Length of the string
+ * Return: string size
  **/
 int  print_rev_string(va_list list)
 {
