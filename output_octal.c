@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_octal - Print a unsigned octal
- * @list: Number to print
+ * print_octal - outputs num in base 8.
+ * @list: Num input
  *
- * Return: Length of the number
+ * Return: num size
  **/
 int print_octal(va_list list)
 {
