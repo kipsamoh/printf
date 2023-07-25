@@ -8,15 +8,15 @@
  **/
 int  print_rev_string(va_list list)
 {
-	int i, size;
+	int x, size;
 	const char *str;
 
 	str = va_arg(list, const char *);
 
 	size = _strlen(str);
 
-	for (i = size - 1; i >= 0; i--)
-		_putchar(str[i]);
+	for (x = size - 1; x >= 0; x--)
+		_putchar(str[x]);
 
 	return (size);
 }
