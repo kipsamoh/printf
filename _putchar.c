@@ -21,16 +21,16 @@ int _putchar(char c)
 int buffer(char c)
 {
 	static char buffering[1024];
-	static int i;
+	static int x;
 
-	if (c == -1 || i == 1024)
+	if (c == -1 || x == 1024)
 	{
-		write(1, buffering, i);
-		i = 0;
+		write(1, buffering, x);
+		x = 0;
 	}
 
 	if (c != -1)
-		buffering[i++] = c;
+		buffering[x++] = c;
 
 	return (1);
 }
