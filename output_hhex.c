@@ -39,13 +39,13 @@ int is_lowercase(char c)
  **/
 char *string_to_upper(char *s)
 {
-	int i;
+	int x;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		if (is_lowercase(s[i]))
+		if (is_lowercase(s[x]))
 		{
-			s[i] = s[i] - 32;
+			s[x] = s[x] - 32;
 		}
 	}
 
