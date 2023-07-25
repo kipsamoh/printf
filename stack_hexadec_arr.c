@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * stack_hexadec_arr - writes character z to screen
  * @binry: binary storage array.

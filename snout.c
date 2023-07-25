@@ -1,11 +1,12 @@
 #include "main.h"
+
 /**
  * output_snout - prints a string and values of
- * non-printed chars
- * @args: input string
- * @bffr: buffer pointer
- * @elem_bffr: index for buffer pointer
- * Return: number of chars printed
+ * non-printed chars.
+ * @args: input string.
+ * @bffr: buffer pointer.
+ * @elem_bffr: index for buffer pointer.
+ * Return: number of chars printed.
  */
 int output_snout(va_list args, char *bffr, unsigned int elem_bffr)
 {

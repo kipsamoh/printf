@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * output_string - output string to screen
- * @args: string
- * @bffr: pointer buffer
- * @elem_bffr: index buffer ptr
+ * output_string - output string to screen.
+ * @args: the string.
+ * @bffr: the pointer buffer.
+ * @elem_bffr: the index buffer ptr.
  * Return: On success 1.
  */
 int output_string(va_list args, char *bffr, unsigned int elem_bffr)

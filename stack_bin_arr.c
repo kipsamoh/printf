@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * stack_bin_arr - outputs decimal into binary
- * @bin: binary pointer
- * @num: number input
- * @is_negative: whether input is negative
- * @max: binary size
+ * stack_bin_arr - outputs decimal into binary.
+ * @bin: binary pointer.
+ * @num: number input.
+ * @is_negative: whether input is negative.
+ * @max: binary size.
  * Return: num chars output.
  */
 char *stack_bin_arr(char *bin, long int num, int is_negative, int max)

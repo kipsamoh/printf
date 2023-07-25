@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * obtain_output_fuctions - picks the corrects function for execution.
- * @ch: args specifier
- * @element: index for args specifier
- * Return: function pointer
+ * @ch: the args specifier.
+ * @element: the index for args specifier.
+ * Return: the function pointer.
  */
 int (*obtain_output_functions(const char *ch, int element))(va_list, char *, unsigned int)
 {

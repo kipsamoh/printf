@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * stack_s_octal_arr - calculates a short octal number
  *

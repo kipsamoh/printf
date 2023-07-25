@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
- * output_unt - outputs unsigned int
- * @args: number output
- * @bffr: buffer pointer
- * @elem_bffr: index pointer
+ * output_unt - outputs unsigned int.
+ * @args: number output.
+ * @bffr: buffer pointer.
+ * @elem_bffr: index pointer.
  * Return: chars ouput.
  */
 int output_unt(va_list args, char *bffr, unsigned int elem_bffr)

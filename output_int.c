@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * output_int - outputs integer
- * @args: string
- * @bffr: buffer pointer
- * @elem_bffr: index pointer
+ * output_int - outputs integer.
+ * @args: the string.
+ * @bffr: the buffer pointer.
+ * @elem_bffr: the index pointer.
  * Return: number of chars output.
  */
 int output_int(va_list args, char *bffr, unsigned int elem_bffr)

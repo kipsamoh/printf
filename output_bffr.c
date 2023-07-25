@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * output_bffr - outputs buffer
- * @bffr: buffer pointer
- * @n_bffr: bytes to output
- * Return:  bytes output.
+ * output_bffr - Outputs buffer
+ * @bffr: the buffer pointer
+ * @n_bffr: the bytes to output
+ * Return:  the bytes output.
  */
 int output_bffr(char *bffr, unsigned int n_bffr)
 {

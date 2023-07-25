@@ -7,10 +7,10 @@
  
 /**
  * struct output - struct for associated output functions.
- * @frmt_type: specifier
- * @pntr: output functions pointer
+ * @frmt_type: specifier.
+ * @pntr: output functions pointer.
  *
- * Description: struct stores pointers for output functions
+ * Description: struct stores pointers for output functions.
  */
 typedef struct output
 {

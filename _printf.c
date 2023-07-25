@@ -2,9 +2,9 @@
 
 /**
  * _printf - outputs formated custom conversion.
- * @format: string input.
+ * @format: the string input.
  *
- * Return: number of chars.
+ * Return: the number of chars.
  */
 int _printf(const char *format, ...)
 {

@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * output_addr - prints the address of an input variable
+ * output_addr - prints the address of an input variable.
  * @args: input address.
  * @bffr: buffer pointer.
- * @elem_bffr: index for buffer pointer
+ * @elem_bffr: index for buffer pointer.
  *
  * Return: number of chars printed.
  */
