@@ -4,10 +4,10 @@ int is_lowercase(char);
 char *string_to_upper(char *);
 
 /**
- * print_hexadecimal_upp - Print a number in hexadecimal format
- * @list: Number to print
+ * print_hexadecimal_upp - outputs hexadecimal in caps.
+ * @list: Num input
  *
- * Return: Length of the number
+ * Return: num size
  **/
 int print_hexadecimal_upp(va_list list)
 {
