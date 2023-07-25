@@ -9,11 +9,11 @@
 int print_integer(va_list list)
 {
 	char *p_buff;
-	int size;
+	int m;
 
 	p_buff = itoa(va_arg(list, int), 10);
 
-	size = print((p_buff != NULL) ? p_buff : "NULL");
+	m = print((p_buff != NULL) ? p_buff : "NULL");
 
-	return (size);
+	return (m);
 }
