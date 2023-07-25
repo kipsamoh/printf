@@ -9,9 +9,9 @@
  **/
 int handler(const char *str, va_list list)
 {
-	int size, x, aux;
+	int m, x, aux;
 
-	size = 0;
+	m = 0;
 	for (x = 0; str[x] != 0; x++)
 	{
 		if (str[x] == '%')
@@ -20,16 +20,16 @@ int handler(const char *str, va_list list)
 			if (aux == -1)
 				return (-1);
 
-			size += aux;
+			m += aux;
 			continue;
 		}
 
 		_putchar(str[x]);
-		size = size + 1;
+		m = m + 1;
 	}
 
 
-	return (size);
+	return (m);
 }
 
 /**
@@ -68,7 +68,7 @@ int percent_handler(const char *str, va_list list, int *x)
 	{
 		if (str[*x] == formats[j].type)
 		{
-			size = formats[j].f(list);
+			m = formats[j].f(list);
 			return (size);
 		}
 
