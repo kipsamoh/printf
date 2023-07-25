@@ -1,19 +1,17 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * output_chr - writes the character z to screen.
- * @args: the input char.
- * @bffr: the buffer pointer.
- * @elem_bffr: the index pointer.
- * Return: On success 1.
+ * print_char - print char.
+ * @list: va_list.
+ *
+ * Return: 1
  */
-int output_chr(va_list args, char *bffr, unsigned int elem_bffr)
+int print_char(va_list list)
 {
-	char z;
+	int aux;
 
-	z = va_arg(args, int);
-	bffr_handle(bffr, z, elem_bffr);
+	aux = va_arg(list, int);
+
+	_putchar(aux);
 
 	return (1);
 }

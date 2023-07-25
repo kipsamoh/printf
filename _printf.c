@@ -1,51 +1,30 @@
 #include "main.h"
 
 /**
- * _printf - outputs formated custom conversion.
- * @format: the string input.
+ * _printf - Produces output according to a format
+ * @format: Is a character string. The format string
+ * is composed of zero or more directives
  *
- * Return: the number of chars.
- */
+ * Return: The number of characters printed (excluding
+ * the null byte used to end output to strings)
+ **/
 int _printf(const char *format, ...)
 {
-	unsigned int x = 0, length = 0, elem_bffr = 0;
+	int size;
 	va_list args;
-	int (*func)(va_list, char *, unsigned int);
-	char *place_holder;
 
-	va_start(args, format), place_holder = malloc(sizeof(char) * 1024);
-	if (!format || !place_holder || (format[x] == '%' && !format[x + 1]))
+	if (format == NULL)
 		return (-1);
-	if (!format[x])
+
+	size = _strlen(format);
+	if (size <= 0)
 		return (0);
-	for (x = 0; format && format[x]; x++)
-	{
-		if (format[x] == '%')
-		{
-			if (format[x + 1] == '\0')
-			{	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(args);
-				return (-1);
-			}
-			else
-			{	func = obtain_output_functions(format, x + 1);
-				if (func == NULL)
-				{
-					if (format[x + 1] == ' ' && !format[x + 2])
-						return (-1);
-					bffr_handle(place_holder, format[x], elem_bffr), length++, x--;
-				}
-				else
-				{
-					length += func(args, place_holder, elem_bffr);
-					x += hpr_output_functions(format, x + 1);
-				}
-			} x++;
-		}
-		else
-			bffr_handle(place_holder, format[x], elem_bffr), length++;
-		for (elem_bffr = length; elem_bffr > 1024; elem_bffr -= 1024)
-			;
-	}
-	output_bffr(place_holder, elem_bffr), free(place_holder), va_end(args);
-	return (length);
+
+	va_start(args, format);
+	size = handler(format, args);
+
+	_putchar(-1);
+	va_end(args);
+
+	return (size);
 }

@@ -1,44 +1,53 @@
 #include "main.h"
+
+int is_lowercase(char);
+char *string_to_upper(char *);
+
 /**
- * output_hhex - prints a short decimal in hexadecimal
- * @args: input string
- * @bffr: buffer pointer
- * @elem_bffr: index for buffer pointer
- * Return: number of chars printed
- */
-int output_hhex(va_list args, char *bffr, unsigned int elem_bffr)
+ * print_hexadecimal_upp - Print a number in hexadecimal format
+ * @list: Number to print
+ *
+ * Return: Length of the number
+ **/
+int print_hexadecimal_upp(va_list list)
 {
-	short int int_input, x, isnegative, sum, digit_1;
-	char *hexadecimal, *binary;
+	char *p_buff;
+	int size;
 
-	int_input = va_arg(args, int);
-	isnegative = 0;
-	if (int_input == 0)
-	{
-		elem_bffr = bffr_handle(bffr, '0', elem_bffr);
-		return (1);
-	}
-	if (int_input < 0)
-	{
-		int_input = (int_input * -1) - 1;
-		isnegative = 1;
-	}
+	p_buff = itoa(va_arg(list, unsigned int), 16);
+	p_buff = string_to_upper(p_buff);
 
-	binary = malloc(sizeof(char) * (16 + 1));
-	binary = stack_bin_arr(binary, int_input, isnegative, 16);
-	hexadecimal = malloc(sizeof(char) * (4 + 1));
-	hexadecimal = stack_hexadec_arr(binary, hexadecimal, 0, 4);
-	for (digit_1 = x = sum = 0; hexadecimal[x]; x++)
+	size = print((p_buff != NULL) ? p_buff : "NULL");
+
+	return (size);
+}
+
+/**
+ * is_lowercase - Check if the character are in lowercase
+ * @c: Character
+ * Return: 1 or 0
+ **/
+int is_lowercase(char c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+/**
+ * string_to_upper - Change the string to uppercase
+ * @s: String
+ * Return: String uppercase
+ **/
+char *string_to_upper(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (hexadecimal[x] != '0' && digit_1 == 0)
-			digit_1 = 1;
-		if (digit_1)
+		if (is_lowercase(s[i]))
 		{
-			elem_bffr = bffr_handle(bffr, hexadecimal[x], elem_bffr);
-			sum++;
+			s[i] = s[i] - 32;
 		}
 	}
-	free(binary);
-	free(hexadecimal);
-	return (sum);
+
+	return (s);
 }
