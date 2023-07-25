@@ -1,17 +1,19 @@
 #include "main.h"
+
 /**
- * print_char - outputs characters.
- * @list: list of arguments
+ * print_hexadecimal_low - Print a number in hexadecimal format
+ * @list: Number to print
  *
- * Return: 1
- */
-int print_char(va_list list)
+ * Return: Length of the number
+ **/
+int print_hexadecimal_low(va_list list)
 {
-	int aux;
+	char *p_buff;
+	int size;
 
-	aux = va_arg(list, int);
+	p_buff = itoa(va_arg(list, unsigned int), 16);
 
-	_putchar(aux);
+	size = print((p_buff != NULL) ? p_buff : "NULL");
 
-	return (1);
+	return (size);
 }

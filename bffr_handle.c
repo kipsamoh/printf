@@ -2,7 +2,7 @@
 
 /**
  * handler - format specifier
- * @str: String 
+ * @str: String.
  * @list: arguments
  *
  * Return: arguments with pointer to string
@@ -36,7 +36,7 @@ int handler(const char *str, va_list list)
  * percent_handler - Controller for percent format
  * @str: String format
  * @list: List of arguments
- * @i: Iterator
+ * @x: Iterator
  *
  * Return: Size of the numbers of elements printed
  **/
