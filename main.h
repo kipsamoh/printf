@@ -35,10 +35,10 @@ int _putchar(char);
 int buffer(char);
 
 /**
- * struct _format - Typedef struct
+ * struct _format - structure types
  *
- * @type: Format
- * @f: The function associated
+ * @type: specifiers
+ * @f: the connected functions
  **/
 typedef struct _format
 {
