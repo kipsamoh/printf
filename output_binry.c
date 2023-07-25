@@ -30,7 +30,7 @@ int output_binry(va_list args, char *bffr, unsigned int elem_bffr)
 	for (sum = x = 0; binary[x]; x++)
 	{
 		if (num1 == 0 && binary[x] == '1')
-			num = 1;
+			num1 = 1;
 		if (num1 == 1)
 		{
 			elem_bffr = bffr_handle(bffr, binary[x], elem_bffr);

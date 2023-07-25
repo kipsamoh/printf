@@ -34,7 +34,7 @@ int output_hhex(va_list args, char *bffr, unsigned int elem_bffr)
 			digit_1 = 1;
 		if (digit_1)
 		{
-			elem_bffr = bffr_handle(bffr, hexadecimal[x], elem_bff);
+			elem_bffr = bffr_handle(bffr, hexadecimal[x], elem_bffr);
 			sum++;
 		}
 	}

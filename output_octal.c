@@ -27,7 +27,7 @@ int output_octal(va_list args, char *bffr, unsigned int elem_bffr)
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = stack_bin_arr(binary, int_input, isnegative, 32);
 	oct_al = malloc(sizeof(char) * (11 + 1));
-	oct_al = stack_bin_arr(binary, oct_al);
+	oct_al = stack_octal_arr(binary, oct_al);
 	for (digit_1 = x = sum = 0; oct_al[x]; x++)
 	{
 		if (oct_al[x] != '0' && digit_1 == 0)

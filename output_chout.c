@@ -10,7 +10,7 @@
  */
 int output_chout(va_list a __attribute__((unused)), char *bffr, unsigned int x)
 {
-	bffe_handle(bffr, '%', x);
+	bffr_handle(bffr, '%', x);
 
 	return (1);
 }

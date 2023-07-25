@@ -27,7 +27,7 @@ int output_sdhexadec(va_list args, char *bffr, unsigned int elem_bffr)
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = stack_bin_arr(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
-	hexadecimal = stack_bin_arr(binary, hexadecimal, 1, 8);
+	hexadecimal = stack_hexadec_arr(binary, hexadecimal, 1, 8);
 	for (digit_1 = x = sum = 0; hexadecimal[x]; x++)
 	{
 		if (hexadecimal[x] != '0' && digit_1 == 0)

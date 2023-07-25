@@ -6,7 +6,7 @@
  * @elem_bffr: index for buffer pointer
  * Return: number of chars printed
  */
-int output_nhex(va_list arguments, char *buf, unsigned int ibuf)
+int output_nhex(va_list args, char *bffr, unsigned int elem_bffr)
 {
 	int int_input, x, isnegative, sum, digit_1;
 	char *hexadecimal, *binary;

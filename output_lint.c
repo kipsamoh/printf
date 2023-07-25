@@ -11,7 +11,7 @@ int output_lint(va_list args, char *bffr, unsigned int elem_bffr)
 	long int int_input;
 	unsigned long int num, temp, x, div, is_negative;
 
-	int_input = va_arg(arguments, long int);
+	int_input = va_arg(args, long int);
 	is_negative = 0;
 	if (int_input < 0)
 	{

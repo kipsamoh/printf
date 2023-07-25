@@ -8,7 +8,8 @@
  * Return: chars ouput.
  */
 int output_unt(va_list args, char *bffr, unsigned int elem_bffr)
-{
+{	
+	(void)elem_bffr;
 	unsigned int num, temp, x, div;
 
 	num = va_arg(args, unsigned int);
@@ -21,7 +22,7 @@ int output_unt(va_list args, char *bffr, unsigned int elem_bffr)
 	}
 	for (x = 0; div > 0; div /= 10, x++)
 	{
-		elem_bffr = bffr_handle(bffr, ((num / div) % 10) + '0', num);
+		 bffr_handle(bffr, ((num / div) % 10) + '0', num);
 	}
 	return (x);
 }

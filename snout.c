@@ -22,10 +22,10 @@ int output_snout(va_list args, char *bffr, unsigned int elem_bffr)
 		if (string[x] < 32 || string[x] >= 127)
 		{
 			elem_bffr = bffr_handle(bffr, '\\', elem_bffr);
-			elem_bffr = buffr_handle(bffr, 'x', elem_bffr);
+			elem_bffr = bffr_handle(bffr, 'x', elem_bffr);
 			w = string[x];
-			binary = stack_bin_arr(binary, w, 0, 32);
-			hexadecimal = stack_bin_arr(binary, hexadecimal, 1, 8);
+			binary = stack_bin_arr(w, 0, 32, binary);
+			hexadecimal = stack_bin_arr(hexadecimal, 1, 8, binary);
 			elem_bffr = bffr_handle(bffr, hexadecimal[6], elem_bffr);
 			elem_bffr = bffr_handle(bffr, hexadecimal[7], elem_bffr);
 			s_um += 3;

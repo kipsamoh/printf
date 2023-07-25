@@ -20,7 +20,7 @@ int output_pint(va_list args, char *bffr, unsigned int elem_bffr)
 	else
 	{
 		num = int_input;
-		elem_bffr = bbfr_handle(bffr, '+', elem_bffr);
+		elem_bffr = bffr_handle(bffr, '+', elem_bffr);
 	}
 	temp = num;
 	div = 1;

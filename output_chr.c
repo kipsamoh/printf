@@ -13,7 +13,7 @@ int output_chr(va_list args, char *bffr, unsigned int elem_bffr)
 	char z;
 
 	z = va_arg(args, int);
-	buffr_handle(bffr, z, elem_bffr);
+	bffr_handle(bffr, z, elem_bffr);
 
 	return (1);
 }

@@ -12,7 +12,7 @@ int output_int(va_list args, char *bffr, unsigned int elem_bffr)
 	int int_input;
 	unsigned int num, temp, x, div, is_negative;
 
-	int_input = va_arg(arguments, int);
+	int_input = va_arg(args, int);
 	is_negative = 0;
 	if (int_input < 0)
 	{
@@ -38,5 +38,5 @@ int output_int(va_list args, char *bffr, unsigned int elem_bffr)
 	{
 		elem_bffr = bffr_handle(bffr, ((num / div) % 10) + '0', elem_bffr);
 	}
-	return (x + is_neg);
+	return (x + is_negative);
 }
