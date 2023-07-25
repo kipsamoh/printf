@@ -30,19 +30,19 @@ int print_pointer(va_list list)
 }
 
 /**
- * _strcmp - Compare two strings
+ * _strcmp - checks similarity btween 2 strings
  * @s1: String 1
  * @s2: String 2
  * Return: Integer
  **/
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int x;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (x = 0; s1[x] != '\0'; x++)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (s1[x] != s2[x])
+			return (s1[x] - s2[x]);
 	}
 
 	return (0);
