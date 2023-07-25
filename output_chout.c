@@ -4,10 +4,10 @@
 int _strcmp(char *, char *);
 
 /**
- * print_pointer - Print a number in hexadecimal format
- * @list: Number to print
+ * print_pointer - output num in base 16
+ * @list: num input
  *
- * Return: Length of the number
+ * Return: size of the num
  **/
 int print_pointer(va_list list)
 {
