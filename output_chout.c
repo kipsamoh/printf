@@ -12,21 +12,21 @@ int _strcmp(char *, char *);
 int print_pointer(va_list list)
 {
 	char *p_buff;
-	int size;
+	int m;
 
 	p_buff = itoa(va_arg(list, unsigned long int), 16);
 
 	if (!_strcmp(p_buff, "0"))
 		return (print("(nil)"));
 
-	size = print("0x");
+	m = print("0x");
 
 	if (!_strcmp(p_buff, "-1"))
-		size += print("ffffffffffffffff");
+		m += print("ffffffffffffffff");
 	else
-		size += print(p_buff);
+		m += print(p_buff);
 
-	return (size);
+	return (m);
 }
 
 /**
