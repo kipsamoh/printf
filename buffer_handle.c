@@ -42,7 +42,7 @@ int handler(const char *str, va_list list)
  **/
 int percent_handler(const char *str, va_list list, int *x)
 {
-	int size, j, number_formats;
+	int m, j, number_formats;
 	format formats[] = {
 		{'s', print_string}, {'c', print_char},
 		{'d', print_integer}, {'i', print_integer},
@@ -64,12 +64,12 @@ int percent_handler(const char *str, va_list list, int *x)
 	}
 
 	number_formats = sizeof(formats) / sizeof(formats[0]);
-	for (size = j = 0; j < number_formats; j++)
+	for (m = j = 0; j < number_formats; j++)
 	{
 		if (str[*x] == formats[j].type)
 		{
 			m = formats[j].f(list);
-			return (size);
+			return (m);
 		}
 
 	}
