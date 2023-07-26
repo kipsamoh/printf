@@ -1,34 +1,28 @@
 #include "main.h"
 
 /**
- * itoa - integer to ascii
- * @num: num
- * @base: base
+ * _printf - output formatter
+ * @format: char input
  *
- * Return: char
+ * Return: chars
  **/
-char *itoa(long int num, int base)
+int _printf(const char *format, ...)
 {
-	static char *array = "0123456789abcdef";
-	static char buffer[50];
-	char sign = 0;
-	char *ptr;
-	unsigned long n = num;
+	int m;
+	va_list args;
 
-	if (num < 0)
-	{
-		n = -num;
-		sign = '-';
-	}
-	ptr = &buffer[49];
-	*ptr = '\0';
+	if (format == NULL)
+		return (-1);
 
-	do      {
-		*--ptr = array[n % base];
-		n /= base;
-	} while (n != 0);
+	m = _strlen(format);
+	if (m <= 0)
+		return (0);
 
-	if (sign)
-		*--ptr = sign;
-	return (ptr);
+	va_start(args, format);
+	m = handler(format, args);
+
+	_putchar(-1);
+	va_end(args);
+
+	return (m);
 }
