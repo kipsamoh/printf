@@ -9,18 +9,18 @@
  **/
 int handler(const char *str, va_list list)
 {
-	int m, x, aux;
+	int m, x, out;
 
 	m = 0;
 	for (x = 0; str[x] != 0; x++)
 	{
 		if (str[x] == '%')
 		{
-			aux = percent_handler(str, list, &x);
-			if (aux == -1)
+			out = percent_handler(str, list, &x);
+			if (out == -1)
 				return (-1);
 
-			m += aux;
+			m += out;
 			continue;
 		}
 
