@@ -7,11 +7,11 @@
  */
 int print_char(va_list list)
 {
-	int aux;
+	int out;
 
-	aux = va_arg(list, int);
+	out = va_arg(list, int);
 
-	_putchar(aux);
+	_putchar(out);
 
 	return (1);
 }
