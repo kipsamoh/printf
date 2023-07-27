@@ -30,7 +30,7 @@ int rot13(char *s)
 }
 
 /**
- * print_rot - Prints the rot13'ed string
+ * print_rot13 - Prints the rot13'ed string
  * @list: String to encoded
  *
  * Return: Length of the string encoded
