@@ -35,13 +35,13 @@ int rot13(char *s)
  *
  * Return: Length of the string encoded
  **/
-int print_rot(va_list list)
+int print_rot13(va_list list)
 {
 	char *p;
-	int p_len;
+	int length;
 
 	p = va_arg(list, char *);
-	p_len = rot13((p != NULL) ? p : "(ahyy)");
+	length = rot13((p != NULL) ? p : "(ahyy)");
 
-	return (p_len);
+	return (length);
 }
