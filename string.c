@@ -10,7 +10,7 @@
 int print_string(va_list list)
 {
 	char *p;
-	int legth;
+	int length;
 
 	p = va_arg(list, char*);
 	length = print((p != NULL) ? p : "(null)");
