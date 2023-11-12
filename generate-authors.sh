@@ -14,9 +14,8 @@ cd "${ROOTDIR}/printf"
 set -x
 
 # Generate AUTHORS file, placing kipsamoh <kipsamoh@gmail.com> as the first contributor
-cat > "${ROOTDIR}/printf/AUTHORS" <<- EOF
-    # This file lists all contributors to the repository.
+{
+  printf "%-4s %-30s %-50s\n" "# This file lists all contributors to the repository." "" ""
+  git log --format='%aN <%aE>' | grep -v -E '^(kipsamoh <133492659\+kipsamoh@users\.noreply\.github\.com>|>)$' | LC_ALL=C.UTF-8 sort -uf | sed 's/ / /g'
+} > "${ROOTDIR}/printf/AUTHORS"
 
-    $(git log --format='%aN <%aE>' | grep -v -E '^(kipsamoh <133492659\+kipsamoh@users\.noreply\.github\.com>|>)$' | LC_ALL=C.UTF-8 sort -uf | sed 's/ / /g')
-	
-EOF
